@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
- 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-
   <body>
-    <ul>
+<ul>  
     <% users.forEach((user, index) => { %>
-      
-        <li><%- `${index} ${user.first}` %></li>
-      
-    <%}) %>
-      </ul>
-    <form action= '/users/update' method= "POST"> 
+   <!--This line is telling the engine to start using javascript, which requires ejs for html to recognize it, hence the different tag of <% That tells html that we are going to use javascript-->
+        
+            <li><%- `${index} ${user.first}` %></li>
+     <!--this, with the brackets is telling the javascript engine that it needs to be interpreted as javascript instead of a string.-->
+        
+     <% }) %>
+</ul>
 
-        <br>
-        <p>ID <input type="number" required name="id"></p></p>
-        <p>First Name:  <input type="text" required name="first"></p>
-        <p>Last Name: <input type="text" required name="last"></p>
-        <p>Email: <input type="email" required name="email"></p>
-        <p>Password: <input type="password" required name="pwd1"></p>
-        <p><input type="submit"></p>      
-      </form>
-      <p>
-        <%= user %>
-      </p>
-    </body>
+<form action= "/users/update" method= "POST">
+id: <br> 
+<input type = "number" name = "id")><br>
+     First name: <br>
+      <input type="text" name="first"><br>
+      Last  name: <br>
+      <input type="text" name= "last"> <br>
+      Email: <br>
+      <input type="email" email= "email"> <br>
+      Password: <br> 
+      <input type= "password" name= "password"> <br>
+      <input type="submit">
+  </form>
+  
+<p>
+  <%= user %> 
+</p>
+
+</body>
 </html>
+

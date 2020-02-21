@@ -1,17 +1,11 @@
 var express = require("express");
 var router = express.Router();
-let users = [
-  {
-    id: 1,
-    first: "Anmaree",
-    last: "Osmond",
-    password: "password",
-    email: "anmaree.osmond@gmail.com"
-  }
-];
+
+let {users} = require("../db/arrayData")
 
 //display registration form
 router.get("/adduser", function(req, res, next) {
+
   res.render("adduser", { response: "" });
 });
 
@@ -114,10 +108,3 @@ router.post("/password", function(req, res, next) {
 
 module.exports = router;
 
-//This is a test======
-/*
-let testArray = ["one", "two", "three"]
-console.log(testArray)
-
-delete testArray[1]
-console.log(testArray)*/

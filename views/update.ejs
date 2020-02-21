@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,32 +7,44 @@
   <body>
 <ul>  
     <% users.forEach((user, index) => { %>
-   <!--This line is telling the engine to start using javascript, which requires ejs for html to recognize it, hence the different tag of <% That tells html that we are going to use javascript-->
         
             <li><%- `${index} ${user.first}` %></li>
-     <!--this, with the brackets is telling the javascript engine that it needs to be interpreted as javascript instead of a string.-->
         
-     <% }) %>
+    <% }) %>
 </ul>
 
 <form action= "/users/update" method= "POST">
 id: <br> 
 <input type = "number" name = "id")><br>
      First name: <br>
-      <input type="text" name="first"><br>
+      <input type="text" name="firstname"><br>
       Last  name: <br>
-      <input type="text" name= "last"> <br>
+      <input type="text" name= "lastname"> <br>
       Email: <br>
       <input type="email" email= "email"> <br>
       Password: <br> 
-      <input type= "password" name= "password"> <br>
+      <input type= "password" name= "Password"> <br>
       <input type="submit">
   </form>
   
 <p>
-  <%= user %> 
+    <%= user %> 
 </p>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
